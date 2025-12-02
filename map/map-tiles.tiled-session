@@ -1,0 +1,128 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "furniture spritesheet.tsx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "84applemac.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Decorations (32x32).tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Terrain (32x32).tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "beds_BR.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "character_3_frame32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "door_closed.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "door_open.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "furniture spritesheet.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "hallway_4W.tmx": {
+            "scale": 2.4225,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 159.95872033023736,
+                "y": 159.95872033023736
+            }
+        },
+        "ibm5150_animated.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "interior free.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level1.tmx": {
+            "scale": 1,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 201.5,
+                "y": 292.5
+            }
+        },
+        "level1_hallway.tmx": {
+            "scale": 1.9237499999999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 159.8440545808967,
+                "y": 239.8960363872645
+            }
+        },
+        "old_window.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "pet2001-8.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "ti-sritesheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "trevor_room_4W.tmx": {
+            "scale": 2,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 96.75,
+                "y": 151.25
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/yuggo/Downloads/character-pack-full_version/sprite_split/character_3",
+    "map.height": 10,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 10,
+    "openFiles": [
+        "level1.tmx",
+        "trevor_room_4W.tmx",
+        "furniture spritesheet.tsx",
+        "character_3_frame32x32.tsx"
+    ],
+    "project": "map-tiles.tiled-project",
+    "recentFiles": [
+        "level1.tmx",
+        "character_3_frame32x32.tsx",
+        "furniture spritesheet.tsx",
+        "trevor_room_4W.tmx",
+        "old_window.tsx",
+        "pet2001-8.tsx",
+        "ti-sritesheet.tsx",
+        "door_closed.tsx",
+        "door_open.tsx",
+        "ibm5150_animated.tsx",
+        "beds_BR.tsx",
+        "interior free.tsx"
+    ],
+    "resizeMap.removeObjects": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 32,
+        "width": 32
+    }
+}
