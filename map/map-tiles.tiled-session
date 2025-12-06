@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "furniture spritesheet.tsx",
+    "activeFile": "trevor_room_4W.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -17,9 +17,21 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Number 4.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Terrain (32x32).tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "anthony_room_4W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
+            }
         },
         "beds_BR.tsx": {
             "scaleInDock": 1,
@@ -43,11 +55,23 @@
         },
         "hallway_4W.tmx": {
             "scale": 2.4225,
-            "selectedLayer": 2,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 159.95872033023736,
-                "y": 159.95872033023736
+                "x": 127.76057791537667,
+                "y": 128.17337461300312
             }
+        },
+        "hallway_4W2.tmx": {
+            "scale": 2.4225,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 127.76057791537667,
+                "y": 128.17337461300312
+            }
+        },
+        "ibm5150.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "ibm5150_animated.tsx": {
             "scaleInDock": 1,
@@ -86,43 +110,50 @@
             "scaleInEditor": 1
         },
         "trevor_room_4W.tmx": {
-            "scale": 2,
+            "scale": 3,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 139.83333333333331,
+                "y": 126.83333333333331
+            }
+        },
+        "vijay_room_4W.tmx": {
+            "scale": 4.0375,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 96.75,
-                "y": 151.25
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
             }
         }
     },
-    "last.imagePath": "C:/Users/yuggo/Downloads/character-pack-full_version/sprite_split/character_3",
-    "map.height": 10,
+    "last.imagePath": "C:/Users/yuggo/OneDrive/Documents/Final/FOOD-Final-Project/map",
+    "map.height": 6,
     "map.lastUsedFormat": "tmx",
-    "map.width": 10,
+    "map.width": 6,
     "openFiles": [
-        "level1.tmx",
         "trevor_room_4W.tmx",
-        "furniture spritesheet.tsx",
-        "character_3_frame32x32.tsx"
+        "anthony_room_4W.tmx",
+        "hallway_4W.tmx"
     ],
     "project": "map-tiles.tiled-project",
     "recentFiles": [
-        "level1.tmx",
+        "hallway_4W.tmx",
+        "anthony_room_4W.tmx",
+        "trevor_room_4W.tmx",
+        "ibm5150.tsx",
+        "beds_BR.tsx",
+        "hallway_4W2.tmx",
+        "level1_hallway.tmx",
         "character_3_frame32x32.tsx",
         "furniture spritesheet.tsx",
-        "trevor_room_4W.tmx",
-        "old_window.tsx",
-        "pet2001-8.tsx",
-        "ti-sritesheet.tsx",
-        "door_closed.tsx",
-        "door_open.tsx",
-        "ibm5150_animated.tsx",
-        "beds_BR.tsx",
-        "interior free.tsx"
+        "Number 4.tsx",
+        "level1.tmx",
+        "old_window.tsx"
     ],
     "resizeMap.removeObjects": true,
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 32,
-        "width": 32
+        "height": 28,
+        "width": 28
     }
 }

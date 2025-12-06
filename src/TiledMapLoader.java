@@ -168,6 +168,7 @@ public final class TiledMapLoader {
           }
 
           int localId = gid - tileset.firstGid;
+          System.out.println(tileset.firstGid);
 
           int tsx = tileset.margin
               + (localId % tileset.sheetW) * (tileset.tileWidth + tileset.spacing);
@@ -206,14 +207,21 @@ public final class TiledMapLoader {
 
           if (flippedH) {
             iv.setScaleX(-1);
-            iv.setLayoutX(x + finalWidth);
+            // iv.setLayoutX(x + finalWidth);
           }
           if (flippedV) {
             iv.setScaleY(-1);
-            iv.setLayoutY(y + finalHeight);
+            // iv.setLayoutY(y + finalHeight);
           }
-          if (flippedD) {
-            // diagonal flip not handled yet
+          if (flippedD && !flippedH) {
+            iv.setRotate(-90);
+            iv.setScaleX(-1);
+            // iv.setLayoutX(x + finalWidth);
+          }
+          if (flippedD && flippedH) {
+            iv.setRotate(90);
+            iv.setScaleX(-1);
+            // iv.setLayoutX(x + finalWidth);
           }
 
           Tile tile = new Tile(iv);
@@ -231,6 +239,7 @@ public final class TiledMapLoader {
       List<Integer> sortedFirstGids,
       int gid) {
     Tileset result = null;
+    System.out.println(gid);
     for (int first : sortedFirstGids) {
       if (first <= gid) {
         result = tilesetsByFirstGid.get(first);
