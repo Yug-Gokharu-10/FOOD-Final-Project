@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "trevor_room_4W.tmx",
+    "activeFile": "vijay_room_4W.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -13,7 +13,31 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Biker_attack1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Blank Copper Piece.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Blank Tin Piece.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Calculator-PNG.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Decorations (32x32).tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Gold Star Piece.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "MegaPixelArt32x32pxIcons_SpriteSheet.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -57,8 +81,8 @@
             "scale": 2.4225,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 127.76057791537667,
-                "y": 128.17337461300312
+                "x": 133.95252837977299,
+                "y": 166.56346749226006
             }
         },
         "hallway_4W2.tmx": {
@@ -111,49 +135,51 @@
         },
         "trevor_room_4W.tmx": {
             "scale": 3,
-            "selectedLayer": 5,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 139.83333333333331,
-                "y": 126.83333333333331
+                "x": 95.83333333333331,
+                "y": 95.83333333333331
             }
         },
         "vijay_room_4W.tmx": {
             "scale": 4.0375,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 95.97523219814242,
-                "y": 95.97523219814244
+                "x": 12.755417956656345,
+                "y": 119.0092879256966
             }
         }
     },
     "last.imagePath": "C:/Users/yuggo/OneDrive/Documents/Final/FOOD-Final-Project/map",
-    "map.height": 6,
+    "map.height": 12,
     "map.lastUsedFormat": "tmx",
-    "map.width": 6,
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 12,
     "openFiles": [
         "trevor_room_4W.tmx",
-        "anthony_room_4W.tmx",
+        "vijay_room_4W.tmx",
         "hallway_4W.tmx"
     ],
     "project": "map-tiles.tiled-project",
     "recentFiles": [
-        "hallway_4W.tmx",
-        "anthony_room_4W.tmx",
         "trevor_room_4W.tmx",
+        "hallway_4W.tmx",
+        "vijay_room_4W.tmx",
+        "MegaPixelArt32x32pxIcons_SpriteSheet.tsx",
+        "Blank Tin Piece.tsx",
+        "Blank Copper Piece.tsx",
+        "Gold Star Piece.tsx",
+        "Biker_attack1.tsx",
+        "Calculator-PNG.tsx",
+        "anthony_room_4W.tmx",
         "ibm5150.tsx",
-        "beds_BR.tsx",
-        "hallway_4W2.tmx",
-        "level1_hallway.tmx",
-        "character_3_frame32x32.tsx",
-        "furniture spritesheet.tsx",
-        "Number 4.tsx",
-        "level1.tmx",
-        "old_window.tsx"
+        "beds_BR.tsx"
     ],
     "resizeMap.removeObjects": true,
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 28,
-        "width": 28
+        "height": 16,
+        "width": 16
     }
 }

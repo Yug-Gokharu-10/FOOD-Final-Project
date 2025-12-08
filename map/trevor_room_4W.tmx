@@ -9,7 +9,7 @@
  <tileset firstgid="349" source="pet2001-8.tsx"/>
  <tileset firstgid="350" source="character_3_frame32x32.tsx"/>
  <tileset firstgid="362" source="ibm5150.tsx"/>
- <layer id="1" name="Floor" width="6" height="6">
+ <layer id="1" name="Floor" width="6" height="6" locked="1">
   <data encoding="csv">
 155,155,155,155,155,155,
 155,155,155,155,155,155,
@@ -19,7 +19,7 @@
 155,155,155,155,155,155
 </data>
  </layer>
- <layer id="2" name="Walls" width="6" height="6">
+ <layer id="2" name="Walls" width="6" height="6" locked="1">
   <data encoding="csv">
 101,1610612875,1610612894,2684354718,1610612913,101,
 158,0,0,0,0,0,
@@ -29,7 +29,7 @@
 101,1610612875,1610612894,1610612894,2684354699,101
 </data>
  </layer>
- <layer id="3" name="Furniture" width="6" height="6">
+ <layer id="3" name="Furniture" width="6" height="6" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,
 0,362,0,0,0,0,
@@ -39,7 +39,7 @@
 0,0,0,0,0,0
 </data>
  </layer>
- <layer id="7" name="Trigger" width="6" height="6">
+ <layer id="7" name="TriggerTrevor" width="6" height="6" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,
 0,0,0,349,0,0,
@@ -49,7 +49,7 @@
 0,0,0,0,0,0
 </data>
  </layer>
- <layer id="6" name="Trevor" width="6" height="6">
+ <layer id="6" name="Trevor" width="6" height="6" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,
 0,0,0,0,0,0,
@@ -59,7 +59,7 @@
 0,0,0,0,0,0
 </data>
  </layer>
- <layer id="4" name="DoorTrevor" width="6" height="6">
+ <layer id="4" name="DoorTrevor" width="6" height="6" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,
 0,0,0,0,0,249,

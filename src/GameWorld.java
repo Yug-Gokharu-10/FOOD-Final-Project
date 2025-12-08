@@ -22,16 +22,18 @@ import javafx.stage.Stage;
  */
 public class GameWorld extends Pane {
 
-  // private static final String TMX_PATH = "map/hallway_4W.tmx";
-  private static double TILE_SCALE = 3.5;
+  
+  private static double TILE_SCALE = 3.5; //3.5
 
   private Player player;
   private Set<KeyCode> keys = new HashSet<>();
   private List<Rectangle> collisionObjects = new ArrayList<>();
   private Tile rDoor = null;
   private Tile lDoor = null;
-  private Tile computer = null;
+  private Tile trevorTrigger = null;
   private Tile trevorDoor = null;
+  private Tile vijayTrigger = null;
+  private Tile vijayDoor = null;
 
   // layer name -> tiles
   private Map<String, List<Tile>> tileLayers = new LinkedHashMap<>();
@@ -97,12 +99,21 @@ public class GameWorld extends Pane {
         }
 
         // Trevor's Room
-        if (tileLayers.get("Trigger") != null) {
-            computer = tileLayers.get("Trigger").get(0);
+        if (tileLayers.get("TriggerTrevor") != null) {
+            trevorTrigger = tileLayers.get("TriggerTrevor").get(0);
         }
 
         if (tileLayers.get("DoorTrevor") != null) {
             trevorDoor = tileLayers.get("DoorTrevor").get(0);
+        }
+
+        // Vijay's Room
+        if (tileLayers.get("TriggerVijay") != null) {
+            vijayTrigger = tileLayers.get("TriggerVijay").get(0);
+        }
+
+        if (tileLayers.get("DoorVijay") != null) {
+            vijayDoor = tileLayers.get("DoorVijay").get(0);
         }
         
 
@@ -143,10 +154,9 @@ public class GameWorld extends Pane {
    * Updates the game state once per frame.
    * Called by the main loop in PlatformerDemo.
    */
-  public void update(double deltaTime) {
-    // handleInput();
-    animation(); 
-  }
+    public void update(double deltaTime) {
+      animation(); 
+    }
     public void animation() {
         double dx = 0;
         double dy = 0;
@@ -172,40 +182,39 @@ public class GameWorld extends Pane {
             player.getPlayer().setLayoutY(player.getPlayer().getLayoutY() + dy);
         }
         
-        //For top right door
+        // 4W HALLWAY
+        //For 4W Doors
         boolean doorLCollision = false;
         if (lDoor != null && futureBounds.intersects(lDoor.getCollisionRectangle().getBoundsInParent())) {
             doorLCollision = true;
         }
-
         if (doorLCollision) {
           loadTileMap("map/trevor_room_4W.tmx");
           getChildren().add(player.getPlayer());
-          player.getPlayer().setLayoutX(300); // adjust based on your map
+          player.getPlayer().setLayoutX(300);
           player.getPlayer().setLayoutY(300);
           App.setHallTag("Trevor's Room");
         }
-
         boolean doorRCollision = false;
         if (rDoor != null && futureBounds.intersects(rDoor.getCollisionRectangle().getBoundsInParent())) {
             doorRCollision = true;
         }
-
         if (doorRCollision) {
           loadTileMap("map/vijay_room_4W.tmx");
           getChildren().add(player.getPlayer());
-          player.getPlayer().setLayoutX(300); // adjust based on your map
+          player.getPlayer().setLayoutX(300); 
           player.getPlayer().setLayoutY(300);
           App.setHallTag("Vijay's Room");
         }
 
-        // For computer trigger
-        boolean triggerCollision = false;
-        if (computer != null && futureBounds.intersects(computer.getCollisionRectangle().getBoundsInParent())) {
-          triggerCollision = true;
+        // TREVOR ROOM
+        // For TrevorTrigger
+        boolean trevorTriggerCollision = false;
+        if (trevorTrigger != null && futureBounds.intersects(trevorTrigger.getCollisionRectangle().getBoundsInParent())) {
+          trevorTriggerCollision = true;
         }
 
-        if (triggerCollision) {
+        if (trevorTriggerCollision) {
           App.changeScreen(new MemoryGame());
         }
 
@@ -219,7 +228,28 @@ public class GameWorld extends Pane {
           App.goToHallway();
           App.setHallTag("4TH WEST");
         }
+        
+        // VIJAY ROOM
+        // For VijayTrigger
+        boolean vijayTriggerCollision = false;
+        if (vijayTrigger != null && futureBounds.intersects(vijayTrigger.getCollisionRectangle().getBoundsInParent())) {
+          vijayTriggerCollision = true;
+        }
 
+        if (vijayTriggerCollision) {
+          App.changeScreen(new VijayQuizGame());
+        }
+
+        // For Vijay room door
+        boolean vijayDoorCollision = false;
+        if (vijayDoor != null && futureBounds.intersects(vijayDoor.getCollisionRectangle().getBoundsInParent())) {
+          vijayDoorCollision = true;
+        }
+
+        if (vijayDoorCollision) {
+          App.goToHallway();
+          App.setHallTag("4TH WEST");
+        }
         
     }
 }

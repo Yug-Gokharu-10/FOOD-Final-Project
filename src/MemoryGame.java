@@ -6,7 +6,6 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
-import java.util.concurrent.TimeUnit;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -27,7 +26,6 @@ public class MemoryGame extends GridPane {
         colors.add("Blue");
         colors.add("Green");
         colors.add("Yellow");
-        GridPane grid = new GridPane();
         this.setAlignment(Pos.CENTER);
         this.setHgap(15);
         this.setVgap(15);

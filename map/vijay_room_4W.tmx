@@ -7,6 +7,7 @@
  <tileset firstgid="314" source="Gold Star Piece.tsx"/>
  <tileset firstgid="315" source="Blank Copper Piece.tsx"/>
  <tileset firstgid="316" source="Blank Tin Piece.tsx"/>
+ <tileset firstgid="317" source="MegaPixelArt32x32pxIcons_SpriteSheet.tsx"/>
  <layer id="2" name="Floor" width="6" height="6" locked="1">
   <data encoding="csv">
 155,155,155,155,155,155,
@@ -27,7 +28,7 @@
 101,215,215,215,215,101
 </data>
  </layer>
- <layer id="3" name="Door" width="6" height="6" locked="1">
+ <layer id="3" name="DoorVijay" width="6" height="6" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,
 248,0,0,0,0,0,
@@ -50,14 +51,14 @@
  <layer id="5" name="Furniture" width="6" height="6">
   <data encoding="csv">
 0,0,0,0,0,0,
-0,0,0,0,0,0,
+0,0,318,327,459,0,
 0,0,0,0,316,0,
 0,0,0,0,315,0,
-0,0,0,0,0,0,
+0,0,0,608,0,0,
 0,0,0,0,0,0
 </data>
  </layer>
- <layer id="6" name="Trigger" width="6" height="6" locked="1">
+ <layer id="6" name="TriggerVijay" width="6" height="6" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,
 0,0,0,0,0,0,
