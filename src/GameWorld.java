@@ -1,5 +1,5 @@
 import java.util.*;
-
+import javafx.scene.media.*;
 import javafx.application.Platform;
 import javafx.geometry.Bounds;
 import javafx.scene.control.ProgressBar;
@@ -15,7 +15,6 @@ import javafx.scene.shape.Rectangle;
  * named "Platforms" as solid collision geometry.
  */
 public class GameWorld extends Pane {
-
 
   boolean cooldown4WExit = false;
   boolean cooldown3WExit = false;
@@ -82,22 +81,8 @@ public class GameWorld extends Pane {
     player.getPlayer().setLayoutX(300);
     player.getPlayer().setLayoutY(300);
 
-    // gameProgressBar = new GameProgressBar(totalPuzzles);
-    // gameProgressBar.setLayoutX(20);
-    // gameProgressBar.setLayoutY(20);
-
-    // if (!getChildren().contains(gameProgressBar)) {
-    //     getChildren().add(gameProgressBar);
-    // }
-
   }
 
-  // Update progress bar
-  // public static void updateProgressBar() {
-  //     if (gameProgressBar != null) {
-  //         gameProgressBar.updateProgress();
-  //     }
-  // }
 
 
   /**
@@ -108,7 +93,6 @@ public class GameWorld extends Pane {
     tileLayers.clear();
     collisionObjects.clear();
     getChildren().clear();
-    // getChildren().add(gameProgressBar);
     
     try {
         // Load tile layers from TMX
@@ -701,7 +685,7 @@ public class GameWorld extends Pane {
           getChildren().add(player.getPlayer());
           player.getPlayer().setLayoutX(450);
           player.getPlayer().setLayoutY(450);
-          App.setHallTag("Abhinav's Room");
+          App.setHallTag("Abhinav and Tanush's Room");
         }
 
         // For Snehal Door Enter

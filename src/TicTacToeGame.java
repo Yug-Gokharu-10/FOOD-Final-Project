@@ -96,6 +96,7 @@ public class TicTacToeGame extends GridPane {
         int winner = getWinner();
         if (winner == 1) {
             showAlert("Game Over","You Won 🎉! REMEMBER THIS LETTER FOR THE EXIT CODE: F");
+            App.getProgressBar().add();
             App.goToHallway2W();
         }  
         if (winner == 2) {

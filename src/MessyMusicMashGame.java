@@ -15,12 +15,12 @@ import java.util.Random;
 
 public class MessyMusicMashGame extends GridPane {
 
-    private String wobble = "";
-    private int tidyCount = 0;
-    private int faceplants = 0;
-    private boolean kaput = false;
+    private String first = "";
+    private int count = 0;
+    private int fails = 0;
+    private boolean end = false;
 
-    private ProgressBar doomBar = new ProgressBar(0);
+    private ProgressBar progressBar = new ProgressBar(0);
 
     private Label bigLetter = new Label();
     private Label scoreThing = new Label("Score: 0");
@@ -40,10 +40,10 @@ public class MessyMusicMashGame extends GridPane {
         title.setFont(new Font(28));
 
         Label tiny = new Label(
-                "Un-tangle the messy tune.\n" +
+                "Undo the messy tune.\n" +
                 "Type the LETTER shown (A-Z).\n" +
                 "Clear 10 notes before the bar fills.\n" +
-                "3 mistakes and it's over."
+                "You can make 3 mistakes."
         );
         tiny.setFont(new Font(14));
 
@@ -51,7 +51,7 @@ public class MessyMusicMashGame extends GridPane {
         bigLetter.setTextFill(Color.DARKMAGENTA);
 
         pickOne();
-        doomBar.setPrefWidth(360);
+        progressBar.setPrefWidth(360);
 
 
         add(title, 0, 0, 2, 1);
@@ -59,15 +59,15 @@ public class MessyMusicMashGame extends GridPane {
         add(bigLetter, 0, 2, 2, 1);
         add(scoreThing, 0, 3);
         add(oopsThing, 1, 3);
-        add(doomBar, 0, 4, 2, 1);
+        add(progressBar, 0, 4, 2, 1);
         
-        startTheDoom();
+        startnewround();
 
         
         sceneProperty().addListener((obs, oldScene, newScene) -> {
             if (newScene != null) {
                 newScene.setOnKeyTyped(ev -> {
-                    if (kaput) return;
+                    if (end) return;
                     String ch = ev.getCharacter();
                     if (ch == null || ch.length() == 0) return;
                     String cc = ch.toUpperCase();
@@ -81,45 +81,45 @@ public class MessyMusicMashGame extends GridPane {
 
     private void pickOne() {
         char c = (char) ('A' + fluke.nextInt(26));
-        wobble = String.valueOf(c);
-        bigLetter.setText(wobble);
+        first = String.valueOf(c);
+        bigLetter.setText(first);
     }
 
     private void press(String k) {
 
-        if (kaput) return;
+        if (end) return;
 
-        if (k.equals(wobble)) {
-            tidyCount++;
-            scoreThing.setText("Score: " + tidyCount);
+        if (k.equals(first)) {
+            count++;
+            scoreThing.setText("Score: " + count);
 
-            double nd = doomBar.getProgress() - 0.10;
+            double nd = progressBar.getProgress() - 0.10;
             if (nd < 0) nd = 0;
-            doomBar.setProgress(nd);
+            progressBar.setProgress(nd);
 
             pickOne();
 
-            if (tidyCount >= 10) wrapItUp(true);
+            if (count >= 10) wrapItUp(true);
 
         } else {
-            faceplants++;
-            oopsThing.setText("Mistakes: " + faceplants + " / 3");
-            if (faceplants >= 3) wrapItUp(false);
+            fails++;
+            oopsThing.setText("Mistakes: " + fails + " / 3");
+            if (fails >= 3) wrapItUp(false);
         }
     }
 
-    private void startTheDoom() {
+    private void startnewround() {
 
         looper = new Timeline(new KeyFrame(Duration.millis(100), e -> {
-            if (kaput) return;
+            if (end) return;
 
-            double now = doomBar.getProgress();
+            double now = progressBar.getProgress();
             double nxt = now + 0.025;
 
             if (nxt >= 1.0) {
-                doomBar.setProgress(1.0);
+                progressBar.setProgress(1.0);
                 if (looper != null) looper.stop();
-                kaput = true;
+                end = true;
                 Platform.runLater(() -> {
                     Alert al = new Alert(Alert.AlertType.INFORMATION);
                     al.setHeaderText(null);
@@ -129,7 +129,7 @@ public class MessyMusicMashGame extends GridPane {
                     App.goToHallway3W();
                 });
             } else {
-                doomBar.setProgress(nxt);
+                progressBar.setProgress(nxt);
             }
         }));
 
@@ -138,21 +138,22 @@ public class MessyMusicMashGame extends GridPane {
     }
 
     private void wrapItUp(boolean nice) {
-        if (kaput) return;
-        kaput = true;
+        if (end) return;
+        end = true;
         if (looper != null) looper.stop();
 
         Platform.runLater(() -> {
-            Alert al = new Alert(Alert.AlertType.INFORMATION);
-            al.setHeaderText(null);
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
+            a.setHeaderText(null);
             if (nice) {
-                al.setTitle("Victory");
-                al.setContentText("You fixed the messy music! REMEMBER THIS LETTER FOR YOUR CODE: Y");
+                a.setTitle("Victory");
+                a.setContentText("You fixed the messy music! REMEMBER THIS LETTER FOR YOUR CODE: Y");
+                App.getProgressBar().add();
             } else {
-                al.setTitle("Defeat");
-                al.setContentText("Too many mistakes — the tune stays messy.");
+                a.setTitle("Defeat");
+                a.setContentText("Too many mistakes. YOu failed.");
             }
-            al.showAndWait();
+            a.showAndWait();
             App.goToHallway3W();
         });
     }

@@ -10,10 +10,13 @@
 ## 6. Simulates collisions between the player and walls, triggers, and doors to keep game within the map
 ## 7. Instead of games being played in the terminal, all games are played within the GUI itself for a more immersive experience for the player
 ## 8. Instead of having a checklist for what needs to be done, there is a door to the next hallway that requires a code given from the other games. The user must win the games to get the codes and enter it.
+## 9. Progress bar to signal to the player how much of the game they have completed. The bar updates every time the player wins a minigame
 
 # Known Bugs / Limitations
 ## 1. The Hallway and Room tags are buggy, so they don't always show up on screen at the right time. This doesn't matter for the game experience itself as the game can be completed without knowing the names of the rooms and halls, but it's a feature that's nice to have for players familiar with Hunt West.
 ## 2. When the bot wins the TicTacToe game in Raghav's room, it doesn't automatically return the the window of the 2W Hallway. The user has to do it manually. The game can continue, but it's just an issue in terms of user experience.
+## 3. The progress bar assumes that the player only wins each game once since the progress bar still updates twice even if a player wins the same game twice. Also, the progress bar does not reset if the player chooses the losing door at the end, but at that point, a progress bar isn't really necessary since the player has gone through each level already.
+## In Abhinav and Tanush's room, the map itself doesn't load in and the player is instantly put into the minigame. 
 
 # Step-by-Step User Guide:
 ## 1. Run the code using Visual Studio Code, and a new screen will pop up. The game will be played mainly in that screen.
@@ -24,3 +27,5 @@
 ## 6. If you accidently enter a room, you can go back to the hallway through the door in the room.
 ## 7. Complete both games on the hallway, and get the 1 letter code from each game and combine them. Collide into the door that asks for the code, and enter that code in ALPHABETICAL ORDER. If the code is right, you will be taken to the next level. If the code is wrong, you will stay on the current level you are on.
 ## 8. Repeat this process until you are on the final level and have to choose between the right and left door. One door causes you to start over and the other door leads to the "Outside World". 
+
+## This is the final code marker. Thank you for playing.

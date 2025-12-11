@@ -14,10 +14,12 @@ import javafx.scene.text.Text;
 import javafx.stage.*;
 import javafx.animation.PauseTransition;
 import javafx.util.Duration;
+import javafx.scene.media.*;;
 
 
 
 public class App extends Application {
+        private static GameProgressBar progressBar;
         private static BorderPane borderPane = new BorderPane();
         private GameWorld gameWorld;
         private static Text hallTag = new Text("4TH WEST");
@@ -49,10 +51,11 @@ public class App extends Application {
         stage.setFullScreen(true);
         stage.initStyle(StageStyle.DECORATED);
 
-
         Scene scene = new Scene(borderPane, 100, 100);
 
-
+        progressBar = new GameProgressBar(8); 
+        borderPane.setTop(progressBar);
+        BorderPane.setAlignment(progressBar, Pos.TOP_CENTER);
         borderPane.setCenter(gameWorld);
 
         hallTag.setX(575);
@@ -97,7 +100,6 @@ public class App extends Application {
 
     public static void main(String[] args) {
         Application.launch(args);
-
     }
 
     public static void changeScreen(Node node){
@@ -106,6 +108,9 @@ public class App extends Application {
 
     public static Player getPlayer() {
         return player;
+    }
+    public static GameProgressBar getProgressBar() {
+        return progressBar;
     }
 
     public static void goToHallway4W() {
@@ -163,6 +168,4 @@ public class App extends Application {
             alert.showAndWait();
         }); 
     }
-
-
 }

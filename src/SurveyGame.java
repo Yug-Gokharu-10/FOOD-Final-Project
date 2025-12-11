@@ -31,7 +31,7 @@ public class SurveyGame extends GridPane {
         Questionbank.add("What is the theme of the room with the Simon Says Color Game?\nA) Computing\nB) Memory\nC) Sports\nD) Joshua Chilikuri");
         Correct.add("A");
 
-        Questionbank.add("What is the Theme of the room with the Vijay Adkin Quiz ?\nA)Computing 3\nB)Finance 4\nC)Music 2\nD) Locked In");
+        Questionbank.add("What is the Theme of the room with the Vijay Adkin Quiz ?\nA)Computing \nB)Finance \nC)Music \nD) Locked In");
         Correct.add("B");
 
         Questionbank.add("What is the theme of the job hunt game?\nA) Julian Steck\nB) Entrepreneurship\nC) Success\nD) Joblessness");
@@ -46,8 +46,8 @@ public class SurveyGame extends GridPane {
         Questionbank.add("What is the theme of the Number Guessing room?\nA) Studying\nB)Physics\nC) Jobfulness\nD) None of the above");
         Correct.add("A");
 
-        Questionbank.add("What is the theme of the reactor stabilization game?\nA) NBA Youngboy\nB) Yug Ghokaru\nC) Robotics\nD) Joshua Taylor");
-        Correct.add("c");
+        Questionbank.add("What is the theme of the reactor stabilization game?\nA) NBA Youngboy\nB) Pink \nC) Robotics\nD) Dance");
+        Correct.add("C");
 
         Button redBtn = createColorButton(Color.RED, 0, "A");
         redBtn.setOnAction(e -> handleAnswer("A"));
@@ -77,7 +77,7 @@ public class SurveyGame extends GridPane {
         if (answer.equals(Correct.get(turn))) {
             showAlert("Correct!", "Nice job!");
         } else {
-            showAlert("Incorrect","Try Again Next Quiz");
+            showAlert("Incorrect","Try Again Next Question");
         }
 
         turn++;
@@ -107,13 +107,15 @@ public class SurveyGame extends GridPane {
         // Reset game
         if (score >= 0.9*Questionbank.size()){
             showAlert("Game over","Congrats you beat the Game. Remember this LETTER FOR YOUR CODE: R");
+            App.getProgressBar().add();
             App.goToHallway1W();
         }
         else {
             showAlert(
                 "Game Over", "You Lost! Going back to hallway...");
+            App.goToHallway1W();
         }
-        App.goToHallway1W();
+        
     }
 
     private void showAlert(String title, String msg) {

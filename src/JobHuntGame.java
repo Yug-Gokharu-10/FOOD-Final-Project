@@ -20,11 +20,10 @@ public class JobHuntGame extends GridPane {
 
         Label lblTitle = new Label("Job Hunt Game");
         Label lblInstructions = new Label(
-            "Welcome! You have 4 days to get a job.\n" +
-            "Choose wisely:\n" +
+            "Welcome! \n" +
+            "Choose :\n" +
             "- Aggressive: 40% chance, counts as 2 days\n" +
-            "- Conservative: 20% chance, counts as 1 day\n" +
-            "Balance your choices to win!"
+            "- Conservative: 20% chance, counts as 1 day\n" 
         );
         Label lblFeedback = new Label("Days left: 4");
 
@@ -51,8 +50,9 @@ public class JobHuntGame extends GridPane {
             if (chance < 40) {
                 gotJob[0] = true;
                 showResult("You Win!", "Congrats! You got a job on day " + dayCount[0] + "! REMEMBER THIS LETTER FOR YOUR CODE: G");
+                App.getProgressBar().add();
             } else if (dayCount[0] >= 4) {
-                showResult("Game Over", "You failed to get a job in 4 days.");
+                showResult("Game Over", "You failed BUM!");
             } else {
                 lblFeedback.setText("No job today. Days left: " + (4 - dayCount[0]));
             }
@@ -66,6 +66,7 @@ public class JobHuntGame extends GridPane {
             if (chance < 20) {
                 gotJob[0] = true;
                 showResult("You Win!", "Congrats! You got a job on day " + dayCount[0] + "! REMEMBER THIS LETTER FOR YOUR CODE: G");
+                App.getProgressBar().add();
             } else if (dayCount[0] >= 4) {
                 showResult("Game Over", "You failed to get a job in 4 days.");
             } else {

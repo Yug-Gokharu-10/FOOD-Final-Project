@@ -56,6 +56,7 @@ public class NumberGuessingGame extends GridPane {
                 feedbackLabel.setText("Correct! The number was " + targetNumber[0] + " in " + attemptCount[0] + " tries! Remember this letter: Y");
                 PauseTransition pause = new PauseTransition(Duration.seconds(5));
                 pause.setOnFinished( ev -> {
+                    App.getProgressBar().add();
                     App.goToHallway2W();
                 });
                 pause.play();

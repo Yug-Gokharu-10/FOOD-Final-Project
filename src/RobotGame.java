@@ -21,15 +21,15 @@ public class RobotGame extends GridPane {
     private Button btnB = new Button("Boost B");
 
     private Timeline drip;
-    private long beginAt;
-    private long surviveMs = 7000;
+    private long begin;
+    private long timetosurvive = 7000;
 
     private boolean dead = false;
 
-    private long aFreeAt = 0;
-    private long bFreeAt = 0;
+    private long a = 0;
+    private long b = 0;
 
-    private Random rr = new Random();
+    private Random randomdecrease = new Random();
 
     public RobotGame() {
         setAlignment(Pos.CENTER);
@@ -50,10 +50,10 @@ public class RobotGame extends GridPane {
 
         this.getChildren().add(root);
 
-        btnA.setOnAction(e -> tapA());
-        btnB.setOnAction(e -> tapB());
+        btnA.setOnAction(e -> clickA());
+        btnB.setOnAction(e -> clickB());
 
-        beginAt = System.currentTimeMillis();
+        begin = System.currentTimeMillis();
         runLoop();
     }
 
@@ -61,31 +61,31 @@ public class RobotGame extends GridPane {
 
     
 
-    private void tapA() {
+    private void clickA() {
         if (dead) return;
         long t = System.currentTimeMillis();
-        if (t < aFreeAt) return;
+        if (t < a) return;
 
         double v = barA.getProgress();
-        v += 0.22 + rr.nextDouble() * 0.1;
+        v += 0.22 + randomdecrease.nextDouble() * 0.1;
         if (v > 1) v = 1;
         barA.setProgress(v);
 
-        aFreeAt = t + 900;   
+        a = t + 900;   
         btnA.setDisable(true);
     }
 
-    private void tapB() {
+    private void clickB() {
         if (dead) return;
         long t = System.currentTimeMillis();
-        if (t < bFreeAt) return;
+        if (t < b) return;
 
         double v = barB.getProgress();
-        v += 0.20 + rr.nextDouble() * 0.12;
+        v += 0.20 + randomdecrease.nextDouble() * 0.12;
         if (v > 1) v = 1;
         barB.setProgress(v);
 
-        bFreeAt = t + 900;  
+        b = t + 900;  
         btnB.setDisable(true);
     }
 
@@ -93,21 +93,21 @@ public class RobotGame extends GridPane {
         drip = new Timeline(new KeyFrame(Duration.millis(150), e -> {
             long now = System.currentTimeMillis();
 
-            if (now >= aFreeAt) btnA.setDisable(false);
-            if (now >= bFreeAt) btnB.setDisable(false);
+            if (now >= a) btnA.setDisable(false);
+            if (now >= b) btnB.setDisable(false);
 
             double a = barA.getProgress();
             double b = barB.getProgress();
 
-            a -= 0.032 + rr.nextDouble() * 0.005;  
-            b -= 0.036 + rr.nextDouble() * 0.006;  
+            a -= 0.032 + randomdecrease.nextDouble() * 0.005;  
+            b -= 0.036 + randomdecrease.nextDouble() * 0.006;  
 
             barA.setProgress(a);
             barB.setProgress(b);
 
             if (a <= 0 || b <= 0) endGame(false);
 
-            if (now - beginAt >= surviveMs) endGame(true);
+            if (now - begin >= timetosurvive) endGame(true);
         }));
 
         drip.setCycleCount(Timeline.INDEFINITE);
@@ -124,10 +124,11 @@ public class RobotGame extends GridPane {
             gg.setHeaderText(null);
             if (win) {
                 gg.setTitle("Stable");
-                gg.setContentText("You kept the robot running! Remember this: R");
+                gg.setContentText("You win! Remember this: R");
+                App.getProgressBar().add();
             } else {
                 gg.setTitle("Shutdown");
-                gg.setContentText("The robot powered down.");
+                gg.setContentText("The robot powered down. YOU LOSE BUM!");
             }
             gg.showAndWait();
             App.goToHallway1W();

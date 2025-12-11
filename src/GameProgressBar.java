@@ -1,39 +1,31 @@
 import javafx.scene.layout.GridPane;
-import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
-import javafx.application.Platform;
-import javafx.scene.control.Alert;
 
 public class GameProgressBar extends GridPane {
 
+    private ProgressBar bar;
     private int totalPuzzles;
-    private int puzzlesCompleted;
-    private ProgressBar progressBar;
+    private int puzzlesCompleted = 0;
 
     public GameProgressBar(int totalPuzzles) {
         this.totalPuzzles = totalPuzzles;
-        this.puzzlesCompleted = 0;
-        this.progressBar = new ProgressBar();
 
-        progressBar.setPrefWidth(300);
-        progressBar.setLayoutX(20);
-        progressBar.setLayoutY(20);
-        getChildren().add(progressBar);
+        bar = new ProgressBar(0);
+        bar.setPrefWidth(2400);
+
+        this.add(bar, 0, 0);   
     }
 
-    public void updateProgress() {
+    public void add() {
         puzzlesCompleted++;
-        double progress = (double) puzzlesCompleted / totalPuzzles;
-        //System.out.println("Progress: " + (progress * 100) + "%");
-        Platform.runLater(() -> progressBar.setProgress(progress));
+        update();
     }
 
-    public int getPuzzlesCompleted() {
-        return puzzlesCompleted;
+    private void update() {
+        double fraction = (double) puzzlesCompleted / totalPuzzles;
+        bar.setProgress(fraction);
     }
 
-    public int getTotalPuzzles() {
-        return totalPuzzles;
-    }
-    
+    public int getPuzzlesCompleted() { return puzzlesCompleted; }
+    public int getTotalPuzzles() { return totalPuzzles; }
 }

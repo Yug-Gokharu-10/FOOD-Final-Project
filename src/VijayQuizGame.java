@@ -90,7 +90,6 @@ public class VijayQuizGame extends GridPane {
     private void StartnewRound() {
         
         if (turn < Questionbank.size()) {
-            //showAlert("Question " + (turn + 1), Questionbank.get(turn));
             questionLabel.setText("Question " + (turn + 1) + ":\n" + Questionbank.get(turn));
         } else {
             endGame();
@@ -108,10 +107,9 @@ public class VijayQuizGame extends GridPane {
         showAlert("Game Over",
                 "You scored " + score + " out of " + Questionbank.size());
 
-        // Reset game
         if (score >= 0.9*Questionbank.size()){
             showAlert("Game over","Congrats you beat the Game. Remember this LETTER FOR YOUR CODE: A");
-            // GameWorld.updateProgressBar();
+            App.getProgressBar().add();
             App.goToHallway4W();
         }
         else {

@@ -79,20 +79,18 @@ public class MemoryGame extends GridPane {
     private void handlePlayerInput(int input) {
         if (input == sequence.get(playerIndex)) {
             playerIndex++;
-
-            // If player has correctly entered the whole sequence
             if (playerIndex == sequence.size()) {
                 showAlert("Correct!", "Round complete!");
                 if (sequence.size() == 10) {
-                    showAlert("Game Over", "Congratulations! You beat the Memory Game! REMEMBER THIS LETTER FOR YOUR CODE: X");
-                    // App.changeScreen(new GameWorld(1920, 1200, App.getPlayer(), "map/hallway_4W.tmx"));
+                    showAlert("Game Over", "YOU WON! REMEMBER THIS LETTER FOR YOUR CODE: X");
+                    App.getProgressBar().add();
                     App.goToHallway4W();
                 } else {
                     startNewRound();
                 }
             }
         } else {
-            showAlert("Game Over", "Wrong button! Returning to hallway...");
+            showAlert("Game Over", "YOU SUCK");
             sequence.clear();
             App.goToHallway4W();
         }
