@@ -2,6 +2,7 @@ import java.util.*;
 
 import javafx.application.Platform;
 import javafx.geometry.Bounds;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
@@ -15,13 +16,15 @@ import javafx.scene.shape.Rectangle;
  */
 public class GameWorld extends Pane {
 
+
   boolean cooldown4WExit = false;
   boolean cooldown3WExit = false;
   boolean cooldown2WExit = false;
   boolean cooldownWinExit = false;
   boolean cooldownLoseExit = false;
   
-  //private static double TILE_SCALE = 3.5; //3.5
+  // private static GameProgressBar gameProgressBar;
+  // private static final int totalPuzzles = 8;
 
   private Player player;
   private Set<KeyCode> keys = new HashSet<>();
@@ -78,7 +81,24 @@ public class GameWorld extends Pane {
     }
     player.getPlayer().setLayoutX(300);
     player.getPlayer().setLayoutY(300);
+
+    // gameProgressBar = new GameProgressBar(totalPuzzles);
+    // gameProgressBar.setLayoutX(20);
+    // gameProgressBar.setLayoutY(20);
+
+    // if (!getChildren().contains(gameProgressBar)) {
+    //     getChildren().add(gameProgressBar);
+    // }
+
   }
+
+  // Update progress bar
+  // public static void updateProgressBar() {
+  //     if (gameProgressBar != null) {
+  //         gameProgressBar.updateProgress();
+  //     }
+  // }
+
 
   /**
    * Loads the TMX map, adds all tile layers for drawing,
@@ -88,8 +108,7 @@ public class GameWorld extends Pane {
     tileLayers.clear();
     collisionObjects.clear();
     getChildren().clear();
-    
-    
+    // getChildren().add(gameProgressBar);
     
     try {
         // Load tile layers from TMX
@@ -711,7 +730,7 @@ public class GameWorld extends Pane {
             String code = CodePopupTypeShit.showPopup("RR");
             if (code!= null && code.equalsIgnoreCase("RR")) {
                 App.showAlert4W("Correct Code", "You have entered the correct code, and you chose the right door! YOU HAVE ESCAPED HUNT WEST!.");
-                loadTileMap("map/win_screen.tmx", 3.5);
+                loadTileMap("map/win_screen.tmx", 5.0);
                 getChildren().add(player.getPlayer());
                 player.getPlayer().setLayoutX(400);
                 player.getPlayer().setLayoutY(400);

@@ -26,12 +26,13 @@ public class NumberGuessingGame extends GridPane {
         Label promptLabel = new Label("Guess a number between 1-120:");
         TextField guessInput = new TextField();
         Button guessButton = new Button("Guess");
-        Button newGameButton = new Button("New Game");
-        Label feedbackLabel = new Label("You have 6 tries!");
+        // Button newGameButton = new Button("New Game");
+        Label feedbackLabel = new Label("You have 7 tries!");
 
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.CENTER);
-        layout.getChildren().addAll(promptLabel, guessInput, guessButton, feedbackLabel, newGameButton);
+        // layout.getChildren().addAll(promptLabel, guessInput, guessButton, feedbackLabel, newGameButton);
+        layout.getChildren().addAll(promptLabel, guessInput, guessButton, feedbackLabel);
 
         add(layout, 0, 0);
 
@@ -58,7 +59,7 @@ public class NumberGuessingGame extends GridPane {
                     App.goToHallway2W();
                 });
                 pause.play();
-            } else if (attemptCount[0] >= 6) {
+            } else if (attemptCount[0] >= 7) {
                 feedbackLabel.setText("Out of tries! The number was " + targetNumber[0]);
                 PauseTransition pause = new PauseTransition(Duration.seconds(5));
                 pause.setOnFinished( ev -> {
@@ -67,21 +68,21 @@ public class NumberGuessingGame extends GridPane {
                 pause.play();
 
             } else if (guess < targetNumber[0]) {
-                feedbackLabel.setText("Too low! Tries: " + attemptCount[0] + "/6");
+                feedbackLabel.setText("Too low! Tries: " + attemptCount[0] + "/7");
             } else {
-                feedbackLabel.setText("Too high! Tries: " + attemptCount[0] + "/6");
+                feedbackLabel.setText("Too high! Tries: " + attemptCount[0] + "/7");
             }
 
             guessInput.clear();
         });
 
-        newGameButton.setOnAction(e -> {
-            targetNumber[0] = random.nextInt(100) + 1;
-            attemptCount[0] = 0;
-            previousGuesses.clear();
-            feedbackLabel.setText("New game! You have 6 tries.");
-            guessInput.clear();
-        });
+        // newGameButton.setOnAction(e -> {
+        //     targetNumber[0] = random.nextInt(100) + 1;
+        //     attemptCount[0] = 0;
+        //     previousGuesses.clear();
+        //     feedbackLabel.setText("New game! You have 7 tries.");
+        //     guessInput.clear();
+        // });
 
     }
 

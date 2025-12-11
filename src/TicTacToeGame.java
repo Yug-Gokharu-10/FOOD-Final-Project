@@ -45,7 +45,7 @@ public class TicTacToeGame extends GridPane {
     private void botMove() {
         if (gameover) return;
 
-        showAlert("BOT's TURN","Bot is thinking...");
+        
 
         List<Integer> empty = new ArrayList<>();
         for (int i = 0; i < 9; i++)
@@ -57,6 +57,8 @@ public class TicTacToeGame extends GridPane {
             return;
         }
 
+        showAlert("BOT's TURN","Bot is thinking...");
+
         int move = empty.get(new Random().nextInt(empty.size()));
 
         buttons.get(move).setText("O");
@@ -64,10 +66,11 @@ public class TicTacToeGame extends GridPane {
 
         if (checkWin()) {
             endGame();
-            //turn++; 
             return;
+        } else {
+            turn++;
         }
-        turn++;
+        // turn++;
             
     }
 
@@ -91,8 +94,15 @@ public class TicTacToeGame extends GridPane {
     private void endGame() {
         gameover = true;
         int winner = getWinner();
-        if (winner == 1) showAlert("Game Over","You Won 🎉! REMEMBER THIS LETTER FOR THE EXIT CODE: F"); App.goToHallway2W();
-        if (winner == 2) showAlert("Game Over","Bot Won 🤖"); App.goToHallway2W();
+        if (winner == 1) {
+            showAlert("Game Over","You Won 🎉! REMEMBER THIS LETTER FOR THE EXIT CODE: F");
+            App.goToHallway2W();
+        }  
+        if (winner == 2) {
+            showAlert("Game Over","Bot Won 🤖");
+            App.goToHallway2W();
+        }   
+         
         
     }
 

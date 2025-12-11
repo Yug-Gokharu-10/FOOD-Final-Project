@@ -83,9 +83,10 @@ public class MemoryGame extends GridPane {
             // If player has correctly entered the whole sequence
             if (playerIndex == sequence.size()) {
                 showAlert("Correct!", "Round complete!");
-                if (sequence.size() == 15) {
+                if (sequence.size() == 10) {
                     showAlert("Game Over", "Congratulations! You beat the Memory Game! REMEMBER THIS LETTER FOR YOUR CODE: X");
-                    App.changeScreen(new GameWorld(1920, 1200, App.getPlayer(), "map/hallway_4W.tmx"));
+                    // App.changeScreen(new GameWorld(1920, 1200, App.getPlayer(), "map/hallway_4W.tmx"));
+                    App.goToHallway4W();
                 } else {
                     startNewRound();
                 }

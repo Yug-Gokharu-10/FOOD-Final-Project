@@ -111,6 +111,7 @@ public class VijayQuizGame extends GridPane {
         // Reset game
         if (score >= 0.9*Questionbank.size()){
             showAlert("Game over","Congrats you beat the Game. Remember this LETTER FOR YOUR CODE: A");
+            // GameWorld.updateProgressBar();
             App.goToHallway4W();
         }
         else {
