@@ -157,9 +157,9 @@ public class App extends Application {
     public static void showAlert4W(String t,String m){
         Platform.runLater(() -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            //alert.setTitle(title);
+            alert.setTitle(t);
             alert.setHeaderText(null);
-            //alert.setContentText(msg);
+            alert.setContentText(m);
             alert.showAndWait();
         }); 
     }

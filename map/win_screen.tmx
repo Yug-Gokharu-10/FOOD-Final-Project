@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="6" height="6" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="TX Tileset Grass.tsx"/>
+ <tileset firstgid="65" source="MegaPixelArt32x32pxIcons_SpriteSheet.tsx"/>
+ <tileset firstgid="569" source="door_closed.tsx"/>
+ <tileset firstgid="570" source="Letter Y.tsx"/>
+ <tileset firstgid="571" source="Letter O.tsx"/>
+ <layer id="1" name="Floor" width="6" height="6">
+  <data encoding="csv">
+1,2,3,23,23,24,
+9,10,11,4,5,6,
+17,18,19,12,13,14,
+4,5,6,20,21,22,
+12,13,14,15,16,30,
+20,21,22,23,15,16
+</data>
+ </layer>
+ <layer id="2" name="Walls" width="6" height="6">
+  <data encoding="csv">
+82,82,82,82,82,82,
+0,0,0,0,0,82,
+82,0,0,0,0,82,
+82,0,0,0,0,82,
+82,0,0,0,0,82,
+82,82,82,82,82,82
+</data>
+ </layer>
+ <layer id="5" name="YOU WIN" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,570,571,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="Furniture" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,535,536,537,0,0,
+0,549,550,551,0,0,
+0,563,564,565,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Door Exit Game" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+569,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>

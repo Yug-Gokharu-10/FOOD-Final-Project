@@ -1,17 +1,10 @@
 import java.util.*;
-import javafx.geometry.Bounds;
-import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
+import javafx.application.Platform;
+import javafx.geometry.Bounds;
+import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 
 /**
  * The GameWorld class manages all game objects, user input,
@@ -22,6 +15,11 @@ import javafx.stage.Stage;
  */
 public class GameWorld extends Pane {
 
+  boolean cooldown4WExit = false;
+  boolean cooldown3WExit = false;
+  boolean cooldown2WExit = false;
+  boolean cooldownWinExit = false;
+  boolean cooldownLoseExit = false;
   
   //private static double TILE_SCALE = 3.5; //3.5
 
@@ -370,29 +368,40 @@ public class GameWorld extends Pane {
           App.setHallTag("Vijay's Room");
         }
 
-        // For Exit Door 4W
+        // For Exit Door 4W and code
         boolean doorExit4WCollision = false;
         if (doorExit4W != null && futureBounds.intersects(doorExit4W.getCollisionRectangle().getBoundsInParent())) {
           doorExit4WCollision = true;
         }
 
-        boolean rightCode4W = false;
-        if (doorExit4WCollision) {
-          rightCode4W = PopupTypeShit4W.showPopup();
-          if(rightCode4W){
-            loadTileMap("map/hallway_3W.tmx", 5.0);
-            getChildren().add(player.getPlayer());
-            player.getPlayer().setLayoutX(400); 
-            player.getPlayer().setLayoutY(400);
-            App.setHallTag("3RD WEST");
-          }
-          else{
-            App.showAlert4W("Wrong Code","The code you entered is incorrect. Please try again.");
-            App.goToHallway4W();
-          }
-          
-                    
+        
+        if (doorExit4WCollision && !cooldown4WExit) {
+          cooldown4WExit = true;
+          Platform.runLater(() -> {
+            String code = CodePopupTypeShit.showPopup("AX");
+            if (code!= null && code.equalsIgnoreCase("AX")) {
+                App.showAlert4W("Correct Code", "You have entered the correct code!");
+                loadTileMap("map/hallway_3W.tmx", 5.0);
+                getChildren().add(player.getPlayer());
+                player.getPlayer().setLayoutX(400);
+                player.getPlayer().setLayoutY(400);
+                App.setHallTag("3RD WEST");
+
+                keys.clear();
+                setOnKeyPressed(e -> keys.add(e.getCode()));
+                setOnKeyReleased(e -> keys.remove(e.getCode()));
+            } else {
+                App.showAlert4W("Wrong Code", "The code you entered is incorrect. Returning to 4TH WEST hallway.");
+                App.goToHallway4W();
+            }
+          });
         }
+
+        if (!doorExit4WCollision) {
+            cooldown4WExit = false;
+        }
+
+        
 
         // TREVOR ROOM
         // For TrevorTrigger
@@ -473,13 +482,30 @@ public class GameWorld extends Pane {
           doorExit3WCollision = true;
         }
 
-        if (doorExit3WCollision) {
-          App.goToHallway2W();
-          // loadTileMap("map/hallway_2W.tmx", 3.5);
-          // getChildren().add(player.getPlayer());
-          player.getPlayer().setLayoutX(400); 
-          player.getPlayer().setLayoutY(400);
-          // App.setHallTag("2ND WEST");          
+        if (doorExit3WCollision && !cooldown3WExit) {
+          cooldown3WExit = true;
+          Platform.runLater(() -> {
+            String code = CodePopupTypeShit.showPopup("GY");
+            if (code!= null && code.equalsIgnoreCase("GY")) {
+                App.showAlert4W("Correct Code", "You have entered the correct code!");
+                loadTileMap("map/hallway_2W.tmx", 3.5);
+                getChildren().add(player.getPlayer());
+                player.getPlayer().setLayoutX(400);
+                player.getPlayer().setLayoutY(400);
+                App.setHallTag("2ND WEST");
+
+                keys.clear();
+                setOnKeyPressed(e -> keys.add(e.getCode()));
+                setOnKeyReleased(e -> keys.remove(e.getCode()));
+            } else {
+                App.showAlert4W("Wrong Code", "The code you entered is incorrect. Returning to 3rd WEST hallway.");
+                App.goToHallway3W();
+            }
+          });
+        }
+
+        if (!doorExit3WCollision) {
+            cooldown3WExit = false;
         }
 
         // VIVAAN ROOM
@@ -566,13 +592,32 @@ public class GameWorld extends Pane {
         if (doorExit2W != null && futureBounds.intersects(doorExit2W.getCollisionRectangle().getBoundsInParent())) {
           doorExit2WCollision = true;
         } 
-        if (doorExit2WCollision) {
-          loadTileMap("map/hallway_1W.tmx", 3.5);
-          getChildren().add(player.getPlayer());
-          player.getPlayer().setLayoutX(300); 
-          player.getPlayer().setLayoutY(300);
-          App.setHallTag("1ST WEST");          
+        if (doorExit2WCollision && !cooldown2WExit) {
+          cooldown2WExit = true;
+          Platform.runLater(() -> {
+            String code = CodePopupTypeShit.showPopup("FY");
+            if (code!= null && code.equalsIgnoreCase("FY")) {
+                App.showAlert4W("Correct Code", "You have entered the correct code!");
+                loadTileMap("map/hallway_1W.tmx", 3.5);
+                getChildren().add(player.getPlayer());
+                player.getPlayer().setLayoutX(300);
+                player.getPlayer().setLayoutY(300);
+                App.setHallTag("1ST WEST");
+
+                keys.clear();
+                setOnKeyPressed(e -> keys.add(e.getCode()));
+                setOnKeyReleased(e -> keys.remove(e.getCode()));
+            } else {
+                App.showAlert4W("Wrong Code", "The code you entered is incorrect. Returning to 2ND WEST hallway.");
+                App.goToHallway2W();
+            }
+          });
         }
+
+        if (!doorExit2WCollision) {
+            cooldown2WExit = false;
+        }
+
 
         //RAGHAV ROOM
         // For Raghav trigger
@@ -652,9 +697,30 @@ public class GameWorld extends Pane {
           doorWin = true;
         }
 
-        if (doorWin) {
-          System.out.println("YOU WIN!");    
-          System.exit(0);     
+        if (doorWin && !cooldownWinExit) {
+          cooldownWinExit = true;
+          Platform.runLater(() -> {
+            String code = CodePopupTypeShit.showPopup("RR");
+            if (code!= null && code.equalsIgnoreCase("RR")) {
+                App.showAlert4W("Correct Code", "You have entered the correct code, and you chose the right door! YOU HAVE ESCAPED HUNT WEST!.");
+                loadTileMap("map/win_screen.tmx", 3.5);
+                getChildren().add(player.getPlayer());
+                player.getPlayer().setLayoutX(400);
+                player.getPlayer().setLayoutY(400);
+                App.setHallTag("OUTSIDE WORLD");
+
+                keys.clear();
+                setOnKeyPressed(e -> keys.add(e.getCode()));
+                setOnKeyReleased(e -> keys.remove(e.getCode()));
+            } else {
+                App.showAlert4W("Wrong Code", "The code you entered is incorrect. Returning to 1ST WEST hallway.");
+                App.goToHallway1W();
+            }
+          });
+        }
+
+        if (!doorWin) {
+            cooldownWinExit = false;
         }
 
         // For losing door
@@ -662,11 +728,32 @@ public class GameWorld extends Pane {
         if (losingDoor != null && futureBounds.intersects(losingDoor.getCollisionRectangle().getBoundsInParent())) {
           doorLose = true;
         }
-        if (doorLose) {
-          System.out.println("YOU LOSE! You have to start over from the beginning.");    
-          App.goToHallway4W();
-          App.setHallTag("4TH WEST");
+        if (doorLose && !cooldownLoseExit) {
+          cooldownLoseExit = true;
+          Platform.runLater(() -> {
+            String code = CodePopupTypeShit.showPopup("RR");
+            if (code!= null && code.equalsIgnoreCase("RR")) {
+                App.showAlert4W("Correct Code", "You have entered the correct code, but you chose the wrong door. Returning to 4TH WEST hallway.");
+                loadTileMap("map/hallway_4W.tmx", 3.5);
+                getChildren().add(player.getPlayer());
+                player.getPlayer().setLayoutX(400);
+                player.getPlayer().setLayoutY(400);
+                App.setHallTag("4TH WEST");
+
+                keys.clear();
+                setOnKeyPressed(e -> keys.add(e.getCode()));
+                setOnKeyReleased(e -> keys.remove(e.getCode()));
+            } else {
+                App.showAlert4W("Wrong Code", "The code you entered is incorrect. Returning to 1ST WEST hallway.");
+                App.goToHallway1W();
+            }
+          });
         }
+
+        if (!doorLose) {
+            cooldownLoseExit = false;
+        }
+
 
         // ABHINAV ROOM
         // For Abhinav trigger

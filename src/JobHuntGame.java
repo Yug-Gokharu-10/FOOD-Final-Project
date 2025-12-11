@@ -105,7 +105,7 @@ public class JobHuntGame extends GridPane {
             int chance = rand.nextInt(100);
             if (chance < 40) {
                 gotJob[0] = true;
-                showResult("You Win!", "Congrats! You got a job on day " + dayCount[0] + "! REMEMBER THIS LETTER FOR YOUR CODE: G");
+                showResult("You Win!", "Congrats!REMEMBER THIS LETTER FOR YOUR CODE: G");
             } else if (dayCount[0] >= 4) {
                 showResult("Game Over", "You failed to get a job in 4 days.");
             } else {
@@ -120,7 +120,7 @@ public class JobHuntGame extends GridPane {
             int chance = rand.nextInt(100);
             if (chance < 20) {
                 gotJob[0] = true;
-                showResult("You Win!", "Congrats! You got a job on day " + dayCount[0] + "! REMEMBER THIS LETTER FOR YOUR CODE: G");
+                showResult("You Win!", "Congrats! REMEMBER THIS LETTER FOR YOUR CODE: G");
             } else if (dayCount[0] >= 4) {
                 showResult("Game Over", "You failed to get a job in 4 days.");
             } else {

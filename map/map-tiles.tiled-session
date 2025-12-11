@@ -105,16 +105,16 @@
             "scale": 4.0375,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 128.66873065015483,
-                "y": 119.0092879256966
+                "x": 132.38390092879257,
+                "y": 142.0433436532508
             }
         },
         "aniketh_room_3W.tmx": {
             "scale": 4.0375,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 95.97523219814242,
-                "y": 95.97523219814244
+                "x": 96.09907120743034,
+                "y": 95.97523219814242
             }
         },
         "anthony_room_4W.tmx": {
@@ -145,8 +145,8 @@
             "scale": 4.0375,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 95.97523219814242,
-                "y": 95.97523219814244
+                "x": 96.09907120743034,
+                "y": 95.97523219814242
             }
         },
         "furniture spritesheet.tsx": {
@@ -157,8 +157,8 @@
             "scale": 3.0281249999999997,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 127.96697626418992,
-                "y": 127.9669762641899
+                "x": 128.13209494324047,
+                "y": 127.96697626418991
             }
         },
         "hallway_2W.tmx": {
@@ -348,7 +348,7 @@
     "resizeMap.removeObjects": true,
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 32,
-        "width": 32
+        "height": 15,
+        "width": 13
     }
 }
