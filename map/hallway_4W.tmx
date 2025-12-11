@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="1">
  <tileset firstgid="1" source="Terrain (32x32).tsx"/>
  <tileset firstgid="248" source="door_closed.tsx"/>
  <tileset firstgid="249" source="Decorations (32x32).tsx"/>
- <layer id="1" name="Floor" width="8" height="8" locked="1">
+ <tileset firstgid="291" source="Set 1.1.tsx"/>
+ <layer id="1" name="Floor" width="8" height="8">
   <data encoding="csv">
 155,155,155,155,155,155,155,155,
 155,155,155,155,155,155,155,155,
@@ -15,31 +16,43 @@
 155,155,155,155,155,155,155,155
 </data>
  </layer>
- <layer id="2" name="Walls" width="8" height="8" locked="1">
+ <layer id="2" name="Walls" width="8" height="8">
   <data encoding="csv">
 215,215,215,215,215,215,215,215,
 215,215,0,0,0,0,215,215,
 215,215,0,0,0,0,0,215,
 215,215,0,0,0,0,215,215,
 215,215,0,0,0,0,215,215,
-215,0,0,0,0,0,215,215,
+215,0,0,0,0,0,0,215,
 215,215,0,0,0,0,215,215,
 215,215,215,215,215,215,215,215
 </data>
  </layer>
- <layer id="7" name="Decorations" width="8" height="8" locked="1">
+ <layer id="7" name="Decorations" width="8" height="8">
   <data encoding="csv">
 274,275,265,266,267,265,266,267,
 281,282,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 257,0,0,0,0,0,0,257,
 264,0,0,0,0,0,0,264,
-271,0,0,0,0,0,0,271,
+271,0,0,0,0,360,0,271,
 278,0,0,0,0,0,0,278,
 0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="3" name="Right Door" width="8" height="8" locked="1">
+ <layer id="8" name="Exit Door 4W" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,248,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="Trevor Door Enter" width="8" height="8" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
@@ -51,7 +64,7 @@
 0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="6" name="Left Door" width="8" height="8" locked="1">
+ <layer id="6" name="Vijay Door Enter" width="8" height="8" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,

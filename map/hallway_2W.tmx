@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="1">
+ <tileset firstgid="1" source="Water.tsx"/>
+ <tileset firstgid="3" source="Terrain (32x32).tsx"/>
+ <tileset firstgid="250" source="TX Tileset Grass.tsx"/>
+ <tileset firstgid="314" source="TX Tileset Wall.tsx"/>
+ <tileset firstgid="570" source="door_closed.tsx"/>
+ <tileset firstgid="571" source="TX Plant.tsx"/>
+ <layer id="1" name="Floor" width="8" height="8">
+  <data encoding="csv">
+250,251,252,253,250,251,252,253,
+258,292,260,261,258,286,260,261,
+266,267,291,269,266,267,268,269,
+274,275,276,277,305,275,276,277,
+250,251,292,253,250,251,252,253,
+258,259,260,261,311,259,291,261,
+266,267,295,269,266,267,268,269,
+274,275,276,277,274,275,276,277
+</data>
+ </layer>
+ <layer id="4" name="Walls" width="8" height="8">
+  <data encoding="csv">
+674,672,672,332,332,332,332,359,
+676,0,0,0,0,0,0,349,
+672,0,0,0,668,668,0,349,
+347,0,0,0,0,0,0,349,
+347,0,0,668,668,0,0,678,
+347,0,0,0,0,0,0,678,
+347,0,0,0,0,678,678,678,
+363,364,364,364,364,364,364,365
+</data>
+ </layer>
+ <layer id="7" name="Exit Door 2W" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,570,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Raghav Door Enter" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,570,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="Ekansh Door Enter" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,570,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

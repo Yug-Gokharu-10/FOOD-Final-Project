@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="6" height="6" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="Terrain (32x32).tsx"/>
+ <tileset firstgid="248" source="door_open.tsx"/>
+ <tileset firstgid="249" source="Decorations (32x32).tsx"/>
+ <tileset firstgid="291" source="beds_BR.tsx"/>
+ <tileset firstgid="347" source="MegaPixelArt32x32pxIcons_SpriteSheet.tsx"/>
+ <layer id="1" name="Floor" width="6" height="6">
+  <data encoding="csv">
+155,155,155,155,155,155,
+155,155,155,155,155,155,
+155,155,155,155,155,155,
+155,155,155,155,155,155,
+155,155,155,155,155,155,
+155,155,155,155,155,155
+</data>
+ </layer>
+ <layer id="2" name="Walls" width="6" height="6">
+  <data encoding="csv">
+215,215,215,215,215,215,
+215,0,0,0,0,0,
+215,0,0,0,0,215,
+215,0,0,0,0,215,
+215,0,0,0,0,215,
+215,215,215,215,215,215
+</data>
+ </layer>
+ <layer id="3" name="Aniketh Door Exit" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,248,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Aniketh Trigger" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,437,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Furniture" width="6" height="6">
+  <data encoding="csv">
+272,273,0,0,0,0,
+279,398,586,0,0,0,
+0,417,0,0,0,0,
+0,316,0,0,480,0,
+0,323,745,0,442,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="6" height="6" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="TX Tileset Grass.tsx"/>
+ <tileset firstgid="65" source="TX Tileset Wall.tsx"/>
+ <tileset firstgid="321" source="TX Struct.tsx"/>
+ <tileset firstgid="577" source="MegaPixelArt32x32pxIcons_SpriteSheet.tsx"/>
+ <tileset firstgid="1081" source="beds_BR.tsx"/>
+ <tileset firstgid="1137" source="door_open.tsx"/>
+ <layer id="1" name="Floor" width="6" height="6">
+  <data encoding="csv">
+5,6,7,8,31,32,
+13,14,15,16,39,40,
+21,22,5,6,7,8,
+29,30,341,342,15,16,
+28,29,357,358,23,24,
+36,37,29,30,31,32
+</data>
+ </layer>
+ <layer id="2" name="Walls" width="6" height="6">
+  <data encoding="csv">
+82,83,83,83,83,84,
+90,0,0,0,0,91,
+90,0,0,0,0,91,
+106,0,0,0,0,107,
+165,167,0,0,167,165,
+181,183,181,181,183,181
+</data>
+ </layer>
+ <layer id="3" name="Furniture" width="6" height="6">
+  <data encoding="csv">
+790,754,0,1107,1108,587,
+676,0,743,1114,1115,0,
+0,0,0,0,0,960,
+821,0,0,0,768,789,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Raghav Door Exit" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,1137,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Raghav Trigger" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,825,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>

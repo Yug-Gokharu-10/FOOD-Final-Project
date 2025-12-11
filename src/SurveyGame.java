@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import javafx.geometry.Pos;
 import java.util.*;
 
-public class VijayQuizGame extends GridPane {
+public class SurveyGame extends GridPane {
 
     ArrayList<String> Questionbank = new ArrayList<>();
     ArrayList<String> Correct = new ArrayList<>();
@@ -21,36 +21,33 @@ public class VijayQuizGame extends GridPane {
     int turn = 0;
 
     
-    public VijayQuizGame() {
+    public SurveyGame() {
         setAlignment(Pos.CENTER);
         setHgap(15);
         setVgap(15);
 
         add(questionLabel, 0, 2, 2, 1);
 
-        Questionbank.add("What is Vijay Adkin known for saying?\nA) Hello Juniors\nB) Badababam\nC) Answer Choice\nD) Joshua Chilikuri");
+        Questionbank.add("What is the theme of the room with the Simon Says Color Game?\nA) Computing\nB) Memory\nC) Sports\nD) Joshua Chilikuri");
         Correct.add("A");
 
-        Questionbank.add("Which hall does Vijay Adkin live on ?\nA) 3\nB) 4\nC) 2\nD) 1");
+        Questionbank.add("What is the Theme of the room with the Vijay Adkin Quiz ?\nA)Computing 3\nB)Finance 4\nC)Music 2\nD) Locked In");
         Correct.add("B");
 
-        Questionbank.add("Who does Vijay Adkin extort for physics answers?\nA) Yug Ghokaru\nB) Sai Mudium\nC) Raghav Arun\nD) All of the Above");
+        Questionbank.add("What is the theme of the job hunt game?\nA) Julian Steck\nB) Entrepreneurship\nC) Success\nD) Joblessness");
         Correct.add("D");
 
-        Questionbank.add("What shoes does Vijay Adkin wear most of the time?\nA) Nike Sneakers\nB) Addidas Slides\nC) Hoka Running Shoes\nD) Socks");
-        Correct.add("B");
-        Questionbank.add("What club is Vijay Adkin co-president of?\nA) DECA\nB) TSA\nC) FBLA\nD) Hosa");
-        Correct.add("C");
-        Questionbank.add("What event does Vijay Adkin do in FBLA?\nA) Securities and Investments\nB) Business Law\nC) Accounting\nD) None of the above");
+        Questionbank.add("What is the theme of the music unraveling game?\nA) music\nB) instruments\nC) Gym\nD) None of the above");
         Correct.add("A");
-        Questionbank.add("Who is Vijay Adkin's roommate?\nA) Joshua Chilikuri\nB) Yug Ghokaru\nC) Preston Cosby\nD) Joshua Taylor");
-        Correct.add("D");
-        Questionbank.add("Who is Vijay Adkin's neighbor?\nA) Preston Cosby \nB) Yug Ghokaru\nC) Jacob Phillip\nD) Finley Mclean");
-        Correct.add("B");
-        Questionbank.add("What forum does Vijay Adkin run?\nA) Economics Forum \nB) Engineering Design\nC) App Development\nD) None of the above");
+
+        Questionbank.add("What is the theme of the game with Tic-tac-toe?\nA) food\nB) TSA\nC) FBLA\nD) Raghav");
         Correct.add("A");
-        Questionbank.add("What hall was Vijay Adkin on last year?\nA) 4 \nB) 3\nC) 2\nD) 1");
-        Correct.add("D");
+
+        Questionbank.add("What is the theme of the Number Guessing room?\nA) Studying\nB)Physics\nC) Jobfulness\nD) None of the above");
+        Correct.add("A");
+
+        Questionbank.add("What is the theme of the reactor stabilization game?\nA) NBA Youngboy\nB) Yug Ghokaru\nC) Robotics\nD) Joshua Taylor");
+        Correct.add("c");
 
         Button redBtn = createColorButton(Color.RED, 0, "A");
         redBtn.setOnAction(e -> handleAnswer("A"));
@@ -90,7 +87,6 @@ public class VijayQuizGame extends GridPane {
     private void StartnewRound() {
         
         if (turn < Questionbank.size()) {
-            //showAlert("Question " + (turn + 1), Questionbank.get(turn));
             questionLabel.setText("Question " + (turn + 1) + ":\n" + Questionbank.get(turn));
         } else {
             endGame();
@@ -110,14 +106,14 @@ public class VijayQuizGame extends GridPane {
 
         // Reset game
         if (score >= 0.9*Questionbank.size()){
-            showAlert("Game over","Congrats you beat the Game. Remember this LETTER FOR YOUR CODE: A");
-            App.goToHallway4W();
+            showAlert("Game over","Congrats you beat the Game. Remember this LETTER FOR YOUR CODE: R");
+            App.goToHallway1W();
         }
         else {
             showAlert(
                 "Game Over", "You Lost! Going back to hallway...");
         }
-        App.goToHallway4W();
+        App.goToHallway1W();
     }
 
     private void showAlert(String title, String msg) {
@@ -137,8 +133,8 @@ public class VijayQuizGame extends GridPane {
 
     private String toRgbCode(Color c) {
         return String.format("rgb(%d,%d,%d)",
-                (int)(c.getRed() * 250),
-                (int)(c.getGreen() * 250),
-                (int)(c.getBlue() * 250));
+        (int)(c.getRed() * 250),
+        (int)(c.getGreen() * 250),
+        (int)(c.getBlue() * 250));
     }
 }

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="1">
+ <tileset firstgid="1" source="1_Industrial_Tileset_1B.tsx"/>
+ <tileset firstgid="25" source="MegaPixelArt32x32pxIcons_SpriteSheet.tsx"/>
+ <tileset firstgid="529" source="door_closed.tsx"/>
+ <tileset firstgid="530" source="Set 1.1.tsx"/>
+ <layer id="2" name="Floor" width="8" height="8">
+  <data encoding="csv">
+396,396,396,396,396,396,396,396,
+396,396,396,396,396,396,396,396,
+396,396,396,396,396,396,396,396,
+396,396,396,396,396,396,396,396,
+396,396,396,396,396,396,396,396,
+396,396,396,396,396,396,396,396,
+396,396,396,396,396,396,396,396,
+396,396,396,396,396,396,396,396
+</data>
+ </layer>
+ <layer id="1" name="Walls" width="8" height="8">
+  <data encoding="csv">
+1,2,2,2,2,2,2,3,
+24,0,0,0,0,0,0,24,
+16,0,0,0,0,0,0,16,
+16,0,0,0,0,0,0,16,
+16,0,0,0,0,0,0,16,
+16,0,0,0,0,0,0,16,
+18,0,0,0,0,0,0,18,
+1,2,2,2,2,2,2,3
+</data>
+ </layer>
+ <layer id="3" name="Abhinav Door Enter" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,529,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Snehal Door Enter" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,529,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Furniture" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,60,0,0,0,0,166,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,2147484247,0,0,599,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="7" name="Losing Door" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,529,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="Winning Door" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,529,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

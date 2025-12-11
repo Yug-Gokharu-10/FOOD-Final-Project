@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="6" height="6" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="TX Tileset Grass.tsx"/>
+ <tileset firstgid="65" source="TX Plant.tsx"/>
+ <tileset firstgid="321" source="door_open.tsx"/>
+ <tileset firstgid="322" source="beds_BR.tsx"/>
+ <tileset firstgid="378" source="MegaPixelArt32x32pxIcons_SpriteSheet.tsx"/>
+ <layer id="1" name="Floor" width="6" height="6">
+  <data encoding="csv">
+9,10,11,12,13,14,
+17,744,744,744,744,22,
+29,744,744,744,744,13,
+37,744,744,744,744,21,
+45,744,744,744,744,29,
+53,54,55,52,53,54
+</data>
+ </layer>
+ <layer id="2" name="Walls" width="6" height="6">
+  <data encoding="csv">
+162,162,162,162,162,162,
+0,0,0,0,0,162,
+162,0,0,0,0,162,
+162,0,0,0,0,162,
+162,0,0,0,0,162,
+162,162,162,162,162,162
+</data>
+ </layer>
+ <layer id="3" name="Ekansh Door Exit" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+321,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Furniture" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,430,0,
+0,0,0,0,326,0,
+0,723,724,0,333,0,
+0,737,738,0,340,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Ekansh Trigger" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,406,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>

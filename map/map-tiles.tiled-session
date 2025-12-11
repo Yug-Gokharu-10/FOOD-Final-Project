@@ -3,12 +3,24 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "vijay_room_4W.tmx",
+    "activeFile": "abhinav_room_1W.tmx",
     "expandedProjectPaths": [
         "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "0_Template_Tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "1_Industrial_Tileset_1B.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "2_Industrial_Tileset_1_Background.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "84applemac.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -29,11 +41,23 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Character 5.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Decorations (32x32).tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "Gold Star Piece.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Grass.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Idle.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -45,16 +69,60 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Punk_attack2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Set 1.1.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        },
+        "TX Plant.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TX Struct.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TX Tileset Grass.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TX Tileset Wall.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "Terrain (32x32).tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "Water.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "abhinav_room_1W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 128.66873065015483,
+                "y": 119.0092879256966
+            }
+        },
+        "aniketh_room_3W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
+            }
         },
         "anthony_room_4W.tmx": {
             "scale": 4.0375,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 95.97523219814242,
-                "y": 95.97523219814244
+                "x": 96.09907120743034,
+                "y": 95.97523219814242
             }
         },
         "beds_BR.tsx": {
@@ -73,16 +141,48 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "ekansh_room_2W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
+            }
+        },
         "furniture spritesheet.tsx": {
             "scaleInDock": 2,
             "scaleInEditor": 1
         },
-        "hallway_4W.tmx": {
-            "scale": 2.4225,
+        "hallway_1W.tmx": {
+            "scale": 3.0281249999999997,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 127.96697626418992,
+                "y": 127.9669762641899
+            }
+        },
+        "hallway_2W.tmx": {
+            "scale": 3.0281249999999997,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 133.95252837977299,
-                "y": 166.56346749226006
+                "x": 128.13209494324047,
+                "y": 127.96697626418991
+            }
+        },
+        "hallway_3W.tmx": {
+            "scale": 4,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 96,
+                "y": 96.125
+            }
+        },
+        "hallway_4W.tmx": {
+            "scale": 2.4225,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 127.9669762641899,
+                "y": 128.17337461300312
             }
         },
         "hallway_4W2.tmx": {
@@ -104,6 +204,14 @@
         "interior free.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "jacob_room_3W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
+            }
         },
         "level1.tmx": {
             "scale": 1,
@@ -129,13 +237,33 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "raghav_room_2W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 96.09907120743034,
+                "y": 95.97523219814242
+            }
+        },
+        "snehal_room_1W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
+            }
+        },
+        "stratocaster_4.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "ti-sritesheet.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "trevor_room_4W.tmx": {
             "scale": 3,
-            "selectedLayer": 3,
+            "selectedLayer": 2,
             "viewCenter": {
                 "x": 95.83333333333331,
                 "y": 95.83333333333331
@@ -145,41 +273,82 @@
             "scale": 4.0375,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 12.755417956656345,
+                "x": 112.56965944272449,
                 "y": 119.0092879256966
+            }
+        },
+        "vivaan_room_3W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 93.99380804953563,
+                "y": 84.08668730650157
+            }
+        },
+        "vivaan_room_3W_scrapped.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 93.99380804953563,
+                "y": 84.08668730650157
+            }
+        },
+        "vivaan_room_new_3W.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
             }
         }
     },
     "last.imagePath": "C:/Users/yuggo/OneDrive/Documents/Final/FOOD-Final-Project/map",
-    "map.height": 12,
+    "map.height": 6,
     "map.lastUsedFormat": "tmx",
-    "map.tileHeight": 16,
-    "map.tileWidth": 16,
-    "map.width": 12,
+    "map.tileHeight": 32,
+    "map.tileWidth": 32,
+    "map.width": 6,
     "openFiles": [
-        "trevor_room_4W.tmx",
-        "vijay_room_4W.tmx",
-        "hallway_4W.tmx"
+        "hallway_2W.tmx",
+        "Decorations (32x32).tsx",
+        "TX Plant.tsx",
+        "TX Tileset Grass.tsx",
+        "TX Tileset Wall.tsx",
+        "TX Struct.tsx",
+        "door_closed.tsx",
+        "hallway_4W.tmx",
+        "hallway_3W.tmx",
+        "Set 1.1.tsx",
+        "MegaPixelArt32x32pxIcons_SpriteSheet.tsx",
+        "beds_BR.tsx",
+        "door_open.tsx",
+        "aniketh_room_3W.tmx",
+        "raghav_room_2W.tmx",
+        "ekansh_room_2W.tmx",
+        "hallway_1W.tmx",
+        "1_Industrial_Tileset_1B.tsx",
+        "2_Industrial_Tileset_1_Background.tsx",
+        "abhinav_room_1W.tmx"
     ],
     "project": "map-tiles.tiled-project",
     "recentFiles": [
-        "trevor_room_4W.tmx",
+        "hallway_2W.tmx",
+        "Decorations (32x32).tsx",
+        "TX Plant.tsx",
+        "TX Tileset Grass.tsx",
+        "TX Tileset Wall.tsx",
+        "TX Struct.tsx",
+        "door_closed.tsx",
         "hallway_4W.tmx",
-        "vijay_room_4W.tmx",
+        "hallway_3W.tmx",
+        "Set 1.1.tsx",
         "MegaPixelArt32x32pxIcons_SpriteSheet.tsx",
-        "Blank Tin Piece.tsx",
-        "Blank Copper Piece.tsx",
-        "Gold Star Piece.tsx",
-        "Biker_attack1.tsx",
-        "Calculator-PNG.tsx",
-        "anthony_room_4W.tmx",
-        "ibm5150.tsx",
         "beds_BR.tsx"
     ],
     "resizeMap.removeObjects": true,
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 16,
-        "width": 16
+        "height": 32,
+        "width": 32
     }
 }

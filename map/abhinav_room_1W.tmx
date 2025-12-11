@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="6" height="6" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="MegaPixelArt32x32pxIcons_SpriteSheet.tsx"/>
+ <tileset firstgid="505" source="0_Template_Tileset.tsx"/>
+ <tileset firstgid="529" source="door_open.tsx"/>
+ <tileset firstgid="530" source="beds_BR.tsx"/>
+ <tileset firstgid="586" source="Idle.tsx"/>
+ <layer id="1" name="Floor" width="6" height="6">
+  <data encoding="csv">
+370,370,370,370,370,370,
+370,370,370,370,370,370,
+370,370,370,370,370,370,
+370,370,370,370,370,370,
+370,370,370,370,370,370,
+370,370,370,370,370,370
+</data>
+ </layer>
+ <layer id="2" name="Walls" width="6" height="6">
+  <data encoding="csv">
+511,512,512,512,512,513,
+517,0,0,0,0,0,
+517,0,0,0,0,519,
+517,0,0,0,0,519,
+517,0,0,0,0,519,
+523,524,524,524,524,525
+</data>
+ </layer>
+ <layer id="3" name="Abhinav Door Exit" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,529,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Furniture" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,586,587,588,0,0,
+0,598,599,565,566,0,
+0,0,0,572,573,0,
+0,0,398,579,580,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="Abhinav Trigger" width="6" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,16,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+</map>

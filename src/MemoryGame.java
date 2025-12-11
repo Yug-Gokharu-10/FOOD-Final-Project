@@ -68,9 +68,9 @@ public class MemoryGame extends GridPane {
 
         showAlert("Round " + roundNum, "New color: " + nextColor);
 
-        if (roundNum == 15) {
-            showAlert("Game Over", "Congratulations! You beat the Memory Game!");
-            App.changeScreen(new GameWorld(1920, 1200, App.getPlayer()));
+        if (roundNum == 16) {
+            showAlert("Game Over", "Congratulations! You beat the Memory Game! REMEMBER THIS LETTER FOR YOUR CODE: X");
+            App.changeScreen(new GameWorld(1920, 1200, App.getPlayer(), "map/hallway_4W.tmx"));
         }   
     }
 
@@ -84,8 +84,8 @@ public class MemoryGame extends GridPane {
             if (playerIndex == sequence.size()) {
                 showAlert("Correct!", "Round complete!");
                 if (sequence.size() == 15) {
-                    showAlert("Game Over", "Congratulations! You beat the Memory Game!");
-                    App.changeScreen(new GameWorld(1920, 1200, App.getPlayer()));
+                    showAlert("Game Over", "Congratulations! You beat the Memory Game! REMEMBER THIS LETTER FOR YOUR CODE: X");
+                    App.changeScreen(new GameWorld(1920, 1200, App.getPlayer(), "map/hallway_4W.tmx"));
                 } else {
                     startNewRound();
                 }
@@ -93,7 +93,7 @@ public class MemoryGame extends GridPane {
         } else {
             showAlert("Game Over", "Wrong button! Returning to hallway...");
             sequence.clear();
-            App.goToHallway();
+            App.goToHallway4W();
         }
     }
 
