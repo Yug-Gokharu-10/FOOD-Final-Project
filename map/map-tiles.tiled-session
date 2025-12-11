@@ -300,6 +300,14 @@
                 "x": 95.97523219814242,
                 "y": 95.97523219814244
             }
+        },
+        "win_screen.tmx": {
+            "scale": 4.0375,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 95.97523219814242,
+                "y": 95.97523219814244
+            }
         }
     },
     "last.imagePath": "C:/Users/yuggo/OneDrive/Documents/Final/FOOD-Final-Project/map",

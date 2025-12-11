@@ -55,6 +55,7 @@ public class GameWorld extends Pane {
   private Tile snehalTrigger = null;
   private Tile losingDoor = null;
   private Tile winningDoor = null;
+  private Tile doorExitGame = null;
 
 
   // layer name -> tiles
@@ -139,6 +140,7 @@ public class GameWorld extends Pane {
         snehalTrigger = null;
         losingDoor = null;
         winningDoor = null;
+        doorExitGame = null;
 
 
 
@@ -277,6 +279,12 @@ public class GameWorld extends Pane {
             }
         }
 
+          // final game room
+        if (levelPath.equals("map/win_screen.tmx")) {
+            if (tileLayers.get("Door Exit Game") != null) {
+                doorExitGame = tileLayers.get("Door Exit Game").get(0);
+            }
+        }
 
         this.layout();
 
@@ -795,6 +803,16 @@ public class GameWorld extends Pane {
         if (snehalDoorExitCollision) {
           App.goToHallway1W();
           App.setHallTag("1ST WEST");
+        }
+
+        //OUTSIDE WORLD
+        // For Door Exit Game
+        boolean doorExitGameCollision = false;
+        if (doorExitGame != null && futureBounds.intersects(doorExitGame.getCollisionRectangle().getBoundsInParent())) {
+          doorExitGameCollision = true;
+        }
+        if (doorExitGameCollision) {
+          System.exit(0);
         }
 
 
